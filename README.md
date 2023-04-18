@@ -13,7 +13,7 @@ Back-End. API do Adopet, a sua plataforma para conectar pessoas que desejam adot
 
 ## Detalhes do projeto
 
-Postman Collection: https://blob.saurus.net.br/drive/clientes/cliente_testesjimmy/Image/Adopet.postman_collection.json
+:fire: Postman Collection: https://bit.ly/3ok5N8r
 Neste desafio, o processo de desenvolvimento para a aplicação Adopet, uma plataforma para conectar pessoas que desejam adotar animais de estimação a abrigos.
 
 Créditos aos conceitos e Front realizado:
