@@ -9,9 +9,11 @@ namespace AdopetAPI.Profiles
     {
         public TutorProfile()
         {
-            CreateMap<CreateTutorDto, Responsavel>();
-            CreateMap<Responsavel, ReadTutorDto>();
-            CreateMap<UpdateTutorDto, Responsavel>();
+            CreateMap<CreateTutorDto, Tutor>();
+            CreateMap<Tutor, ReadTutorDto>();
+            CreateMap<UpdateTutorDto, Tutor>();
+            CreateMap<UpdateTutorDto, ReadTutorDto>();
+            CreateMap<ReadTutorDto, UpdateTutorDto>();
         }
     }
 }

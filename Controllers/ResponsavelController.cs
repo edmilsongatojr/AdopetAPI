@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AdopetAPI.Controllers
 {
-    [ApiController, Route("api/v1/responsaveis"), Tags("2. Responsaveis dos PETs")]
+    [ApiController, Route("api/v1/responsaveis"), Tags("2. Responsaveis dos Pets")]
     public class ResponsavelController : ControllerBase
     {
         private readonly ResponsavelService _service;

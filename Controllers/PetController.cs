@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AdopetAPI.Controllers
 {
-    [ApiController, Route("api/v1/pets"), Tags("1. PETs")]
+    [ApiController, Route("api/v1/pets"), Tags("1. Pets")]
     public class PetController : ControllerBase
     {
         private readonly PetService _service;

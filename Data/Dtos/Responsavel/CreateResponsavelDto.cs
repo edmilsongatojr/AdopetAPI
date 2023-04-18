@@ -6,8 +6,7 @@ namespace AdopetAPI.Data.Dtos.Responsavel
     /// </summary>
     public class CreateResponsavelDto
     {
-        [Key, Required]
-        public int Resp_Id { get; set; }
+
         [Required(ErrorMessage = "É necessário informar o nome do responsável!")]
         public string? Resp_Nome { get; set; }
         [Required(ErrorMessage = "É necessário informar o telefone do responsável!")]

@@ -20,6 +20,9 @@ namespace AdopetAPI.Services
         public ReadPetDto AdicionarPet(CreatePetDto petDto)
         {
             Pet pet = _mapper.Map<Pet>(petDto);
+            Responsavel responsavel = _mapper.Map<Responsavel>(petDto.Responsavel);
+            _context.Responsaveis.Add(responsavel);
+            _context.SaveChanges();
             _context.Pets.Add(pet);
             _context.SaveChanges();
             return _mapper.Map<ReadPetDto>(pet);

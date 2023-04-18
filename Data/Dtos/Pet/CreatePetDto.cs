@@ -9,8 +9,6 @@ namespace AdopetAPI.Data.Dtos.Pet
     /// </summary>
     public class CreatePetDto
     {
-        [Key, Required]
-        public int Pet_Id { get; set; }
         [Required(ErrorMessage = "É necessário informar o nome do pet!")]
         public string? Pet_Nome { get; set; }
         [Required(ErrorMessage = "A idade do pet é importante! Precisa ser informado.")]

@@ -7,9 +7,7 @@ namespace AdopetAPI.Data.Dtos.Tutores
     /// </summary>
     public class CreateTutorDto
     {
-        [Key]
-        [Required]
-        public int Tutor_Id { get; set; }
+
         [Required(ErrorMessage = "O nome do Tutor é um campo obrigatorio.")]
         public string? Tutor_Nome { get; set; }
         [Required(ErrorMessage = "Precisamos do telefone para contato do Tutor.")]

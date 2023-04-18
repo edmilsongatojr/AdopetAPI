@@ -28,19 +28,22 @@ namespace AdopetAPI.Services
 
         public List<ReadTutorDto> RetornarTutor(string nomeDoTutor)
         {
-            List<Tutor> Tutors = _context.Tutores.ToList();
-            if (Tutors == null)
+            List<Tutor> Tutores = _context.Tutores.ToList();
+            if (Tutores == null)
             {
                 return null;
             }
             if (!string.IsNullOrEmpty(nomeDoTutor))
             {
-                IEnumerable<Tutor> query = from Tutor in Tutors
-                                                 where Tutor.Tutor_Nome == nomeDoTutor
-                                                 select Tutor;
-                Tutors = query.ToList();
+                IEnumerable<Tutor> query = from Tutor in Tutores
+                                           where Tutor.Tutor_Nome.Contains(nomeDoTutor)
+                                           select Tutor;
+                Tutores = query.ToList();
             }
-            return _mapper.Map<List<ReadTutorDto>>(Tutors);
+            else
+                Tutores = Tutores.OrderBy(order => order.Tutor_Nome).ToList();
+
+            return _mapper.Map<List<ReadTutorDto>>(Tutores);
 
         }
 
